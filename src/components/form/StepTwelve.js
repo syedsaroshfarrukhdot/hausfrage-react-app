@@ -46,10 +46,10 @@ const StepThree = ({ setForm, formData, navigation }) => {
       console.log(formData);
       event.preventDefault();
       next();
-      // await axios.post(
-      //   "https://eigenheim-backend.herokuapp.com/create-form/",
-      //   formData
-      // );
+      await axios.post(
+        "https://hausfrage-frontend-backend.herokuapp.com/create-form/",
+        formData
+      );
     }
 
     console.log(form.checkValidity());
