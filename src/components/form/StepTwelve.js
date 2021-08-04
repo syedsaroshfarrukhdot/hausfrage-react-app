@@ -21,6 +21,9 @@ const StepThree = ({ setForm, formData, navigation }) => {
 
   const { previous, next } = navigation;
   const [validated, setValidated] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked1, setIsChecked1] = useState(false);
+
 
   const [value, setValue] = useState(91.3);
 
@@ -55,6 +58,16 @@ const StepThree = ({ setForm, formData, navigation }) => {
     console.log(form.checkValidity());
   };
 
+ 
+  const handleOnChange = () => {
+    setIsChecked(true);
+    setIsChecked1(false);
+  };
+  const handleOnChange1 = () => {
+    setIsChecked(false);
+    setIsChecked1(true);
+  };
+
   return (
     <div className="form">
       <p className="form-step-2">
@@ -75,6 +88,8 @@ const StepThree = ({ setForm, formData, navigation }) => {
                 className="form-checkbox-css"
                 type="checkbox"
                 label="Frau"
+                checked={isChecked}
+                onChange={handleOnChange}
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridHerr">
@@ -82,6 +97,8 @@ const StepThree = ({ setForm, formData, navigation }) => {
                 className="form-checkbox-css"
                 type="checkbox"
                 label="Herr"
+                checked={isChecked1}
+                onChange={handleOnChange1}
               />
             </Form.Group>
           </Form.Row>
