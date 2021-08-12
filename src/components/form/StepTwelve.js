@@ -9,21 +9,13 @@ import { TextField } from "./TextField";
 import * as Yup from "yup";
 
 const StepThree = ({ setForm, formData, navigation }) => {
-  const {
-    firstName,
-    lastName,
-    address,
-    postcode,
-    place,
-    email,
-    phone,
-  } = formData;
+  const { firstName, lastName, address, postcode, place, email, phone } =
+    formData;
 
   const { previous, next } = navigation;
   const [validated, setValidated] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [isChecked1, setIsChecked1] = useState(false);
-
 
   const [value, setValue] = useState(91.3);
 
@@ -50,7 +42,7 @@ const StepThree = ({ setForm, formData, navigation }) => {
       event.preventDefault();
       next();
       await axios.post(
-        "https://hausfrage-frontend-backend.herokuapp.com/create-form/",
+        "https://hausfrage-backend-api-7oo6e.ondigitalocean.app/create-form/",
         formData
       );
     }
@@ -58,7 +50,6 @@ const StepThree = ({ setForm, formData, navigation }) => {
     console.log(form.checkValidity());
   };
 
- 
   const handleOnChange = () => {
     setIsChecked(true);
     setIsChecked1(false);
