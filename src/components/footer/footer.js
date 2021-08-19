@@ -24,11 +24,7 @@ export default function Footer() {
                 *Rechtlicher Hinweis: Der Service ist für Sie komplett kostenfrei und unverbindlich. Wir finanzieren den Service über die Provision unserer Anbieter.
                 </span>
             </div>
-            <div id="footer-link">
-                <a href="https://einfach-zum-angebot.de/impressum/">Impressum</a>
-                &nbsp;-&nbsp;  
-                <a href=" https://einfach-zum-angebot.de/datenschutzerklaerung/">Datenschutz</a>  
-            </div>
+            
             
         </div>
     )
