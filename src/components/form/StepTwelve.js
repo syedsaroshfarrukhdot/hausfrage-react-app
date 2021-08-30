@@ -42,7 +42,7 @@ const StepThree = ({ setForm, formData, navigation }) => {
       event.preventDefault();
       next();
       await axios.post(
-        "https://hausfrage-backend-api-7oo6e.ondigitalocean.app/create-form/",
+        "https://hausfrage-backend-api-fxhx7.ondigitalocean.app/create-form/",
         formData
       );
     }
